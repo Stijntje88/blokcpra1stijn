@@ -30,7 +30,7 @@ section{
 
   #mySidenav a {
     position: relative; /* Verwijder de fixed position, aangezien het nu wordt beheerd door flexbox */
-    left: -70px; /* Zet ze buiten het scherm */
+    left: -60px; /* Zet ze buiten het scherm */
     transition: 0.3s;
     padding: 15px;
     width: 100px;
@@ -95,7 +95,17 @@ li {
 .h2{
     text-align: center;
 }
+#locatie {
+    display: flex;
+    justify-content: center; /* Centreert de afbeelding horizontaal */
+    align-items: center; /* (Optioneel) Centreert de afbeelding ook verticaal binnen de sectie */
+    flex-direction: column; /* Zorgt ervoor dat de inhoud onder elkaar wordt gestapeld */
+}
 
+.imgm {
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet te groot wordt voor de container */
+    height: auto;
+}
 li:hover {
     background-color: #0056b3;
 }

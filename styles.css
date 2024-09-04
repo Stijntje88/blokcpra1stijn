@@ -30,7 +30,7 @@ section{
 
   #mySidenav a {
     position: relative; /* Verwijder de fixed position, aangezien het nu wordt beheerd door flexbox */
-    left: -80px; /* Zet ze buiten het scherm */
+    left: -70px; /* Zet ze buiten het scherm */
     transition: 0.3s;
     padding: 15px;
     width: 100px;

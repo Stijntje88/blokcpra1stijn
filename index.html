@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curio Software Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="img/curio.png" alt="curio">
+            <h1>Software Development jaar 1</h1>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a class="knop" href="#inleiding" >Inleiding</a>
+            <a class="knop" href="#vakken" >Vakken</a>
+            <a class="knop" href="#rooster" >Rooster</a>
+            <a class="knop" href="#blokken" >Blokken</a>
+            <a class="knop" href="#smoelenboek">Docenten</a>
+        </div>
+    </header>
+    <main>
+        <section id="inleiding" class="inleidingen">
+            <h2>Inleiding over de MBO-opleiding Software Developer</h2>
+            <p>Tijdens de MBO-opleiding Software Developer krijg je een uitgebreide training in het ontwikkelen van
+                software en het bouwen van apps. Je leert werken met verschillende programmeertalen zoals C#, PHP en
+                JavaScript, waarmee je alles kunt maken, van websites en applicaties tot complexe toepassingen en
+                media-oplossingen. De opleiding richt zich niet alleen op het schrijven van code, maar ook op het
+                begrijpen van de wensen van de klant en het omzetten van die wensen in functionele en
+                gebruiksvriendelijke software. Je krijgt praktische ervaring in het testen en optimaliseren van je
+                projecten, zodat je zeker weet dat ze perfect functioneren voordat ze worden opgeleverd. Deze opleiding
+                bereidt je voor op een rol als software developer, waarbij je jouw technische vaardigheden inzet om
+                innovatieve oplossingen te creëren en te implementeren.</p>
+        </section>
+
+        <section id="vakken">
+            <h2 class="h2">Vakken in het Eerste Jaar</h2>
+            <ul>
+                <li onclick="toggleInfo('nederlands-info')">
+                    <strong>Nederlands:</strong> Nederlands taal leren op niveau B3.
+                    <div id="nederlands-info" class="vak-info">
+                        <p>In deze cursus Nederlands leer je de taal op niveau B3. Dit omvat geavanceerde grammatica,
+                            schrijfvaardigheden en spreekvaardigheden.</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('engels-info')">
+                    <strong>Engels:</strong> Engels taal leren op niveau B2.
+                    <div id="engels-info" class="vak-info">
+                        <p>De cursus Engels brengt je naar niveau B2, waarbij je vaardigheden in spreken, luisteren,
+                            lezen en schrijven worden verbeterd.</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('rekenen-info')">
+                    <strong>Rekenen:</strong> Rekenen op niveau 3F.
+                    <div id="rekenen-info" class="vak-info">
+                        <p>De rekenlessen zijn gericht op niveau 3F, met een focus op toepassingen in het dagelijks
+                            leven en werk.</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('pra-info')">
+                    <strong>PRA:</strong> Je gaat aan de slag met opdrachten die je ook in het bedrijfsleven tegenkomt.
+                    <div id="pra-info" class="vak-info">
+                        <p>PRA is gericht op praktijkopdrachten die nauw aansluiten bij wat je in het bedrijfsleven
+                            tegenkomt. Je leert hoe je deze opdrachten effectief kunt uitvoeren.</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('pro-info')">
+                    <strong>PRO:</strong> Je leert hoe je een project moet aanpakken en hoe je moet samenwerken.
+                    <div id="pro-info" class="vak-info">
+                        <p>Bij PRO leer je projectmanagement en samenwerkingstechnieken die essentieel zijn voor het
+                            succesvol uitvoeren van projecten.</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('web-info')">
+                    <strong>WEB:</strong> Je leert websites maken met HTML, CSS, JavaScript en PHP.
+                    <div id="web-info" class="vak-info">
+                        <p>In de WEB cursus leer je de basis van webontwikkeling, waaronder HTML, CSS, JavaScript en PHP
+                            om functionele websites te bouwen.</p>
+                    </div>
+                </li>
+                <li onclick="toggleInfo('native-info')">
+                    <strong>NATIVE:</strong> Je leert apps maken voor de micro:bit en Windows.
+                    <div id="native-info" class="vak-info">
+                        <p>De NATIVE cursus leert je hoe je applicaties ontwikkelt voor de micro:bit en
+                            Windows-platforms, met een focus op praktische toepassing.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <script>
+                function toggleInfo(id) {
+                    var infoDiv = document.getElementById(id);
+                    // Sluit alle andere informatie-divs
+                    var allInfoDivs = document.querySelectorAll('.vak-info');
+                    allInfoDivs.forEach(function (div) {
+                        if (div.id !== id) {
+                            div.style.display = "none";
+                        }
+                    });
+                    // Toon of verberg het aangeklikte info-div
+                    if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                        infoDiv.style.display = "block";
+                    } else {
+                        infoDiv.style.display = "none";
+                    }
+                }
+
+                // Zorg ervoor dat alle vak-info bij het laden van de pagina verborgen zijn
+                window.onload = function () {
+                    var allInfoDivs = document.querySelectorAll('.vak-info');
+                    allInfoDivs.forEach(function (div) {
+                        div.style.display = 'none';
+                    });
+                };
+            </script>
+        </section>
+
+        <section id="rooster">
+            <h2>Voorbeeld Rooster</h2>
+            <img src="img/Rooster eerste leerjaar.png" alt="Voorbeeldrooster eerstejaars"
+                style="max-width: 100%; height: auto;">
+        </section>
+
+        <section id="blokken">
+            <h2>Indeling van de Blokken</h2>
+            <p>Het schooljaar is opgedeeld in vier blokken dit is de indeling van leerjaar 1
+            </p>
+            <img src="img/Overzicht blok.jpg" alt="Overzicht blokken" style="max-width: 100%; height: auto;">
+        </section>
+
+        <section id="smoelenboek">
+            <h2>Docenten</h2>
+
+
+            <div class="docent">
+                <img src="img/br10.png" alt="Foto Bart Roos" style="width: 150px; height: auto;">
+                <p><strong>Bart Roos</strong></p>
+                <p>Vak: PRA</p>
+            </div>
+
+            <div class="docent">
+                <img src="img/MustafaKasar.png" alt="Foto Mustafa Kasar" style="width: 150px; height: auto;">
+                <p><strong>Mustafa Kasar</strong></p>
+                <p>Vak: Engels</p>
+            </div>
+
+            <div class="docent">
+                <img src="img/eb89.png" alt="Foto Elton Boekhout" style="width: 150px; height: auto;">
+                <p><strong>Elton Boekhout</strong></p>
+                <p>Vak: WEB</p>
+            </div>
+
+            <div class="docent">
+                <img src="img/BartKouwenberg.png" alt="Foto Bart Kouwenberg" style="width: 150px; height: auto;">
+                <p><strong>Bart Kouwenberg</strong></p>
+                <p>Vak: Native</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Curio Software Development</p>
+    </footer>
+</body>
+
+</html>

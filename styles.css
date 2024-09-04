@@ -1,0 +1,182 @@
+/* Algemeen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFD700; /* Gele achtergrondkleur */
+    color: #333;
+}
+section{
+    margin: 100px;
+}
+
+
+.header {
+    display: flex;
+    background-color: #100060; /* Donkerblauw */
+    color: white;
+    padding: 20px;
+    /* Verwijder text-align: center omdat flexbox niet dit nodig heeft */
+}
+/* Style the links inside the sidenav */
+#mySidenav {
+    position: fixed;
+    top: 300px; /* Plaatst de navigatiebalk iets naar beneden vanaf de bovenkant */
+    left: 0; /* Links uitlijnen */
+    display: flex;
+    flex-direction: column; /* Zet de kinderen verticaal uitgelijnd */
+
+  }
+
+  #mySidenav a {
+    position: relative; /* Verwijder de fixed position, aangezien het nu wordt beheerd door flexbox */
+    left: -80px; /* Zet ze buiten het scherm */
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+
+ .knop{
+    background-color: #002060;
+ }
+
+
+
+
+
+h1 {
+    padding-left:100px;
+    padding-top:100px;
+    margin: 0;
+    font-size: 2.5rem;
+    color: white; /* Zorg ervoor dat de tekstkleur van de titel wit is */
+}
+
+/* Kopjes in zwart */
+h2 {
+    color: #000; /* Zwart voor alle h2 elementen */
+    margin-top: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Vakken lijst - tekst gecentreerd */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Verwijder marges van ul om problemen met centeren te voorkomen */
+}
+
+
+
+li {
+    padding: 15px;
+    margin-left: 400px ;
+    margin-right: 400px ;
+
+    background-color: #100060;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    text-align: center; /* Tekst gecentreerd */
+}
+.h2{
+    text-align: center;
+}
+
+li:hover {
+    background-color: #0056b3;
+}
+
+.vak-info.active {
+    display: block;
+}
+/* Styling voor de sectie met de klasse 'inleiding' */
+.inleidingen {
+    max-width: 800px; /* Maximale breedte van de sectie */
+    margin: 0 auto;   /* Centraal uitlijnen door automatische marges aan de zijkanten */
+    padding: 20px;    /* Ruimte rond de inhoud */
+    text-align: center; /* Tekst centreren binnen de sectie */
+}
+
+/* Stijlen voor de koptekst binnen de klasse 'inleiding' */
+.inleidingen h2 {
+    font-size: 2em; /* Vergroot de grootte van de koptekst */
+    margin-bottom: 20px; /* Ruimte onder de koptekst */
+}
+
+/* Stijlen voor de paragraaf binnen de klasse 'inleiding' */
+.inleidingen p {
+    font-size: 1.25em; /* Vergroot de tekstgrootte van de paragraaf */
+    line-height: 1.6; /* Verhoog de regelhoogte voor betere leesbaarheid */
+    color: #333; /* Donkere tekstkleur voor betere leesbaarheid */
+}
+
+
+.vak-info {
+
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    color: black;
+    padding-top: 10px;
+    padding-bottom:5px;
+    border-radius: 100px;
+}
+
+/* Afbeeldingen in secties */
+section img {
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Docenten sectie */
+#smoelenboek {
+    text-align: center; /* Centreer alle inhoud in de sectie */
+}
+
+#smoelenboek h2 {
+    margin: 0; /* Verwijder eventuele standaardmarges rond de heading */
+    padding-bottom: 15px; /* Voeg ruimte toe onder de heading */
+}
+
+.docent {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 100px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Laat de items even breed zijn */
+    max-width: 200px;
+    display: inline-block; /* Zorg ervoor dat de items naast elkaar worden weergegeven */
+}
+
+.docent img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Footer */
+footer {
+    background-color: #002060; /* Donkerblauw zoals de header */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

@@ -3,190 +3,202 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFD700; /* Gele achtergrondkleur */
+    background-color: #FFD700;
     color: #333;
 }
-section{
-    margin: 100px;
-}
 
-
+/* Flexbox voor de header */
 .header {
     display: flex;
-    background-color: #100060; /* Donkerblauw */
+    flex-direction: column;
+    align-items: center;
+    background-color: #100060;
     color: white;
     padding: 20px;
-    /* Verwijder text-align: center omdat flexbox niet dit nodig heeft */
+    text-align: center;
 }
-/* Style the links inside the sidenav */
-#mySidenav {
-    position: fixed;
-    top: 300px; /* Plaatst de navigatiebalk iets naar beneden vanaf de bovenkant */
-    left: 0; /* Links uitlijnen */
-    display: flex;
-    flex-direction: column; /* Zet de kinderen verticaal uitgelijnd */
 
-  }
-
-  #mySidenav a {
-    position: relative; /* Verwijder de fixed position, aangezien het nu wordt beheerd door flexbox */
-    left: -60px; /* Zet ze buiten het scherm */
-    transition: 0.3s;
-    padding: 15px;
-    width: 100px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 0 5px 5px 0;
-  }
-
-  #mySidenav a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
-  }
-
- .knop{
-    background-color: #002060;
- }
-
-
-
-
+.header img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
 
 h1 {
-    padding-left:100px;
-    padding-top:100px;
-    margin: 0;
     font-size: 2.5rem;
-    color: white; /* Zorg ervoor dat de tekstkleur van de titel wit is */
+    margin: 0;
 }
 
-/* Kopjes in zwart */
-h2 {
-    color: #000; /* Zwart voor alle h2 elementen */
-    margin-top: 20px;
+/* Navigatiebalk aan de zijkant */
+#mySidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #100060;
+    padding: 10px;
 }
 
+#mySidenav a {
+    padding: 10px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    background-color: #002060;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+#mySidenav a:hover {
+    background-color: #0056b3;
+}
+
+/* Hoofdinhoud */
 main {
+    margin-left: 220px; /* Houd ruimte voor de navigatiebalk */
     padding: 20px;
 }
 
-/* Vakken lijst - tekst gecentreerd */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #000;
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Lijsten */
 ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Verwijder marges van ul om problemen met centeren te voorkomen */
+    margin: 0;
 }
 
-
-
 li {
-    padding: 15px;
-    margin-left: 400px ;
-    margin-right: 400px ;
-
+    padding: 20px;
     background-color: #100060;
     color: white;
     margin-bottom: 10px;
-    border-radius: 100px;
+    border-radius: 25px;
     cursor: pointer;
-    position: relative;
-    text-align: center; /* Tekst gecentreerd */
-}
-.h2{
     text-align: center;
-}
-#locatie {
-    display: flex;
-    justify-content: center; /* Centreert de afbeelding horizontaal */
-    align-items: center; /* (Optioneel) Centreert de afbeelding ook verticaal binnen de sectie */
-    flex-direction: column; /* Zorgt ervoor dat de inhoud onder elkaar wordt gestapeld */
+    position: relative;
+    font-size: 1.2rem;
 }
 
-.imgm {
-    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet te groot wordt voor de container */
-    height: auto;
-}
 li:hover {
     background-color: #0056b3;
 }
 
-.vak-info.active {
-    display: block;
-}
-/* Styling voor de sectie met de klasse 'inleiding' */
-.inleidingen {
-    max-width: 800px; /* Maximale breedte van de sectie */
-    margin: 0 auto;   /* Centraal uitlijnen door automatische marges aan de zijkanten */
-    padding: 20px;    /* Ruimte rond de inhoud */
-    text-align: center; /* Tekst centreren binnen de sectie */
-}
-
-/* Stijlen voor de koptekst binnen de klasse 'inleiding' */
-.inleidingen h2 {
-    font-size: 2em; /* Vergroot de grootte van de koptekst */
-    margin-bottom: 20px; /* Ruimte onder de koptekst */
-}
-
-/* Stijlen voor de paragraaf binnen de klasse 'inleiding' */
-.inleidingen p {
-    font-size: 1.25em; /* Vergroot de tekstgrootte van de paragraaf */
-    line-height: 1.6; /* Verhoog de regelhoogte voor betere leesbaarheid */
-    color: #333; /* Donkere tekstkleur voor betere leesbaarheid */
-}
-
-
 .vak-info {
-
     margin-top: 10px;
     background-color: #f0f0f0;
     color: black;
-    padding-top: 10px;
-    padding-bottom:5px;
-    border-radius: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1rem;
 }
 
-/* Afbeeldingen in secties */
-section img {
-    margin: 20px 0;
+/* Afbeeldingen */
+img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Docenten sectie */
-#smoelenboek {
-    text-align: center; /* Centreer alle inhoud in de sectie */
-}
-
-#smoelenboek h2 {
-    margin: 0; /* Verwijder eventuele standaardmarges rond de heading */
-    padding-bottom: 15px; /* Voeg ruimte toe onder de heading */
-}
-
 .docent {
     background-color: #ffffff;
     padding: 15px;
-    margin: 100px;
+    margin: 10px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Laat de items even breed zijn */
+    display: inline-block;
     max-width: 200px;
-    display: inline-block; /* Zorg ervoor dat de items naast elkaar worden weergegeven */
 }
 
 .docent img {
     border-radius: 50%;
     margin-bottom: 10px;
-    max-width: 100%;
-    height: auto;
+    max-width: 100px;
 }
-
 
 /* Footer */
 footer {
-    background-color: #002060; /* Donkerblauw zoals de header */
+    background-color: #002060;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     margin-top: 20px;
+}
+
+/* Media Queries voor Responsiviteit */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header img {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #mySidenav {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #mySidenav a {
+        width: auto;
+        padding: 10px;
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    main {
+        margin-left: 0; /* Verwijder marge voor mobiele apparaten */
+        padding: 10px;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    li {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .vak-info {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .docent {
+        max-width: 100%;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .docent img {
+        max-width: 80px;
+    }
 }

@@ -23,6 +23,43 @@ body {
     height: auto;
     margin-bottom: 10px;
 }
+.midden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Optioneel: zorgt ervoor dat de tekst gecentreerd is */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Pas deze breedte aan indien nodig */
+    overflow: hidden;
+    margin: 0 auto; /* Centreert de slider horizontaal */
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* 100% per afbeelding, 3 afbeeldingen */
+    animation: slide 12s infinite; /* Verhoog de animatieduur voor een vloeiendere overgang */
+}
+
+.imgm {
+    width: 33.33%; /* Zorg ervoor dat elke afbeelding een derde van de container breedte neemt */
+    flex-shrink: 0; /* Zorg ervoor dat de afbeeldingen niet worden ingekort */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); } /* Eerste afbeelding zichtbaar */
+    40% { transform: translateX(-33.33%); } /* Tweede afbeelding begint zichtbaar te worden */
+    60% { transform: translateX(-33.33%); } /* Tweede afbeelding volledig zichtbaar */
+    80% { transform: translateX(-66.66%); } /* Derde afbeelding begint zichtbaar te worden */
+    100% { transform: translateX(-66.66%); } /* Derde afbeelding volledig zichtbaar */
+}
+
+
 
 h1 {
     font-size: 2.5rem;
